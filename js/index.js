@@ -95,20 +95,31 @@ nav.prepend(aPrepend);
 
 //middle section content headings
 
-let h4 = document.querySelectorAll("h4");
+let h4 = document.querySelectorAll("h4"); //all h4
+
 //features card
+
 h4[0].textContent = siteContent["main-content"]["features-h4"];
+
 //about card
+
 h4[1].textContent = siteContent["main-content"]["about-h4"];
+
 //services card
+
 h4[2].textContent = siteContent["main-content"]["services-h4"];
+
 //product card
+
 h4[3].textContent = siteContent["main-content"]["product-h4"];
+
 //vision card
+
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 
 //middle section content paragraphs
-let p = document.querySelectorAll("p");
+
+let p = document.querySelectorAll("p"); //all p tags
 p[0].textContent = siteContent["main-content"]["features-content"];
 p[1].textContent = siteContent["main-content"]["about-content"];
 p[2].textContent = siteContent["main-content"]["services-content"];
@@ -116,12 +127,17 @@ p[3].textContent = siteContent["main-content"]["product-content"];
 p[4].textContent = siteContent["main-content"]["vision-content"];
 
 //contact section
+
 //contact heading
+
 h4[5].textContent = siteContent["contact"]["contact-h4"];
+
 //contact items
+
 p[5].textContent = siteContent["contact"]["address"];
 p[6].textContent = siteContent["contact"]["phone"];
 p[7].textContent = siteContent["contact"]["email"];
 
 //footer section
+
 p[8].textContent = siteContent["footer"]["copyright"];
