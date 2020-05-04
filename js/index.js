@@ -43,103 +43,85 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute("src", siteContent["nav"]["img-src"]);
-
-let navAnchors = document.querySelectorAll("a");
-// console.log(navAnchors);
-
-//set attribute
-navAnchors[0].setAttribute("class", "nav-item-1");
-navAnchors[1].setAttribute("class", "nav-item-2");
-navAnchors[2].setAttribute("class", "nav-item-3");
-navAnchors[3].setAttribute("class", "nav-item-4");
-navAnchors[4].setAttribute("class", "nav-item-5");
-navAnchors[5].setAttribute("class", "nav-item-6");
-
-//inner text
-navAnchors[0].textContent("Service");
-navAnchors[1].textContent("Product");
-navAnchors[2].textContent("Vision");
-navAnchors[3].textContent("Features");
-navAnchors[4].textContent("About");
-navAnchors[5].textContent("Contact");
-
-navAnchors.forEach((link) => (link.style.color = "green"));
-
-//add 2 new nav items
-
-//new nav item 1
-
-const newNavItem1 = document.createElement("a"); //create the first new nav elem
-newNavItem1.textContent = "Chat"; //add text to the new nav elem
-newNavItem1.style.color = "green"; //add color to the new nav item
-newNavItem1.href = "#";
-const newHeader = document.querySelector("nav"); // add new item to the header
-newHeader.appendChild(newNavItem1);
-//new nav item 2
-
-const newNavItem2 = document.createElement("a"); //create the 2nd new nav elem
-newNavItem2.textContent = "Reviews"; //add text to the new nav elem
-newNavItem2.style.color = "green"; //add color to the new nav item
-newNavItem2.href = "#";
-const newHeader2 = document.querySelector("nav"); // add new item to the header
-newHeader2.appendChild(newNavItem2);
-
-//main header items
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-let mainHeading = document.querySelector("h1");
-mainHeading.textContent = siteContent["cta"]["h1"];
+//update header img
 
-let mainButton = document.querySelector("button");
-mainButton.innerText = "Get started";
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-//cta image
-let logo2 = document.querySelector("cta-img");
-logo2.setAttribute("src", siteContent["cta"]["img-src"]);
+//update middle img
 
-//main content
-let mainContent = document.querySelectorAll(".text-content");
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-mainContent[0].querySelector("h4").textContent =
-  siteContent["main-content"]["features-h4"];
-mainContent[0].querySelector("p").textContent =
-  siteContent["main-content"]["features-content"];
-mainContent[1].querySelector("h4").textContent =
-  siteContent["main-content"]["about-h4"];
-mainContent[1].querySelector("p").textContent =
-  siteContent["main-content"]["about-content"];
-mainContent[2].querySelector("h4").textContent =
-  siteContent["main-content"]["services-h4"];
-mainContent[2].querySelector("p").textContent =
-  siteContent["main-content"]["services-content"];
-mainContent[3].querySelector("h4").textContent =
-  siteContent["main-content"]["product-h4"];
-mainContent[3].querySelector("p").textContent =
-  siteContent["main-content"]["product-content"];
-mainContent[4].querySelector("h4").textContent =
-  siteContent["main-content"]["vision-h4"];
-mainContent[4].querySelector("p").textContent =
-  siteContent["main-content"]["vision-content"];
+//update h1
 
-let logo3 = document.querySelector("#middle-img");
-logo3.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+let h1 = document.querySelector("h1");
+h1.textContent = siteContent["cta"]["h1"];
+
+//update button
+
+let button = document.querySelector("button");
+button.textContent = siteContent["cta"]["button"];
+
+//loop through anchors and apply color green
+
+let anchors = document.querySelectorAll("a");
+for (let i = 0; i < anchors.length; i++) {
+  anchors[i].textContent = siteContent["nav"]["nav-item-" + (i + 1)];
+  anchors[i].style.color = "green";
+}
+
+//add 2 new nav elements
+//new nav element 1 added to end of nav
+
+const aChildAppend = document.createElement("a");
+aChildAppend.href = "#";
+aChildAppend.textContent = "Reviews";
+aChildAppend.style.color = "green";
+const nav = document.querySelector("nav");
+nav.appendChild(aChildAppend);
+
+//new nav element 2 added to front of nav
+
+const aPrepend = document.createElement("a");
+aPrepend.href = "#";
+aPrepend.textContent = "Let's Chat";
+aPrepend.style.color = "green";
+nav.prepend(aPrepend);
+
+//middle section content headings
+
+let h4 = document.querySelectorAll("h4");
+//features card
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+//about card
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+//services card
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+//product card
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+//vision card
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+//middle section content paragraphs
+let p = document.querySelectorAll("p");
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
 
 //contact section
+//contact heading
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+//contact items
+p[5].textContent = siteContent["contact"]["address"];
+p[6].textContent = siteContent["contact"]["phone"];
+p[7].textContent = siteContent["contact"]["email"];
 
-let contactInfo = document / querySelector(".contact");
-contactInfo.getElementsByTagName("h4")[0].textContent["contact"][contact - h4];
-contactInfo.getElementsByTagName("p")[0].textContent =
-  siteContent["contact"]["address"];
-contactInfo.getElementsByTagName("p")[1].textContent =
-  siteContent["contact"]["phone"];
-contactInfo.getElementsByTagName("p")[2].textContent =
-  siteContent["contact"]["email"];
-
-//footer
-
-let footer = document.querySelector("footer");
-footer.textContent = "Copyright Great Idea! 2018";
+//footer section
+p[8].textContent = siteContent["footer"]["copyright"];
