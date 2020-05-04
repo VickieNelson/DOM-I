@@ -72,7 +72,7 @@ navAnchors.forEach((link) => (link.style.color = "green"));
 //new nav item 1
 
 const newNavItem1 = document.createElement('a'); //create the first new nav elem
-const newNavItem1.innerText = "Chat"; //add text to the new nav elem
+const newNavItem1.innerText = ("Chat"); //add text to the new nav elem
 newNavItem1.style.color = 'green'; //add color to the new nav item
 newNavItem1.href = '#'; 
 const newHeader = document.querySelector('nav'); // add new item to the header
@@ -81,7 +81,7 @@ newHeader.appendChild(newNavItem1);
 
 
 const newNavItem2 = document.createElement('a'); //create the 2nd new nav elem
-const newNavItem2.innerText = "Reviews"; //add text to the new nav elem
+const newNavItem2.innerText = ("Reviews"); //add text to the new nav elem
 newNavItem2.style.color='green'; //add color to the new nav item
 newNavItem2.href = '#'; 
 const newHeader2 = document.querySelector('nav'); // add new item to the header
@@ -98,7 +98,7 @@ let mainHeading = document.querySelector('h1');
 mainHeading.textContent = siteContent['cta'] ['h1'];
 
 let mainButton = document.querySelector('button');
-mainButton.innerText = "Get started";
+mainButton.innerText = ("Get started");
 
 //cta image
 let logo2 = document.querySelector("cta-img");
@@ -119,7 +119,7 @@ mainContent[3].querySelector('p').textContent = siteContent['main-content']['pro
 mainContent[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4'];
 mainContent[4].querySelector('p').textContent = siteContent['main-content']['vision-content'];
 
-let logo3 = document.querySelector("#middle-img");
+let logo3 = document.querySelector('#middle-img');
 logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
@@ -135,4 +135,4 @@ contactInfo.getElementsByTagName('p')[2].textContent = siteContent["contact"]["e
 //footer
 
 let footer = document.querySelector('footer');
-footer.innerText = "Copyright Great Idea! 2018";
+footer.innerText = ("Copyright Great Idea! 2018");
