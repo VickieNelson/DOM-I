@@ -66,3 +66,24 @@ navAnchors[4].innerText("About");
 navAnchors[5].innerText("Contact");
 
 navAnchors.forEach((link) => (link.style.color = "green"));
+
+//add 2 new nav items
+
+//new nav item 1
+
+const newNavItem1 = document.createElement('a'); //create the first new nav elem
+const newNavItem1.innerText = "Chat"; //add text to the new nav elem
+newNavItem1.style.color = 'green'; //add color to the new nav item
+newNavItem1.href = '#'; 
+const newHeader = document.querySelector('nav'); // add new item to the header
+newHeader.appendChild(newNavItem1);
+//new nav item 2
+
+
+const newNavItem2 = document.createElement('a'); //create the 2nd new nav elem
+const newNavItem2.innerText = "Reviews"; //add text to the new nav elem
+newNavItem2.style.color='green'; //add color to the new nav item
+newNavItem2.href = '#'; 
+const newHeader2 = document.querySelector('nav'); // add new item to the header
+newHeader2.appendChild(newNavItem1);
+
